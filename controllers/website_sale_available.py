@@ -16,7 +16,7 @@ class controller(website_sale):
         res = super(controller, self).confirm_order(**post)
 
         order = request.website.sale_get_order(context=request.context)
-        _logger.info('Entcart %s', order)
+        #_logger.info('Entcart %s', order)
         for line in order.order_line:
             if line.product_id.type != 'service' and line.product_uom_qty > line.product_id.virtual_available:
                 return request.redirect("/shop/cart")

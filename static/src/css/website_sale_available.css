@@ -1,3 +1,7 @@
 table#cart_products tr.warning input.js_quantity{
 	background-color: #FAA;
 }
+table#cart_products .text-muted, table#cart_products .text-center, table#cart_products .text-right{
+    color: #333333;
+}
+
