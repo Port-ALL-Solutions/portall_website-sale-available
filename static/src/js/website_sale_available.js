@@ -25,7 +25,7 @@ $(document).ready(function () {
         })
         $('a[href="/shop/checkout"]').toggleClass('disabled', !available);
     }
-    
+
     $(input_selector).on('change', function(){
         check(this)
     })
