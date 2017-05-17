@@ -19,6 +19,7 @@ class controller(website_sale):
         #_logger.info('Entcart %s', order)
         for line in order.order_line:
             if line.product_id.type != 'service' and line.product_uom_qty > line.product_id.virtual_available:
+                _logger.info('Check Inventory %s', line.product_id.name)
                 return request.redirect("/shop/cart")
 
         return res
